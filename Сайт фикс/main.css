@@ -1,0 +1,117 @@
+/* шрифты */
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&family=Abhaya+Libre+ExtraBold&display=swap');
+
+/* Общие настройки */
+body, html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Yeseva One', sans-serif;
+    color: #fff;
+}
+
+ul {
+  list-style-type: disc; /* стандартная точка */
+  padding-left: 20px;    /* отступ слева, чтобы текст не прилипал к краю */
+  margin: 0 0 5px 0;     /* отступ снизу между пунктами */
+  line-height: 1.2;      /* плотное расстояние между строками */
+}
+
+li {
+  font-size: 32px;       /* размер шрифта */
+}
+
+/* Заголовки */
+h1, h2 {
+    font-family: 'Abhaya Libre ExtraBold', sans-serif;
+    margin: 0;
+}
+
+/* Общие стили для всех параграфов */
+p {
+    margin: 0 0 5px 0;  /* минимальный отступ между абзацами */
+    line-height: 1.2;   /* плотное расстояние между строками */
+}
+
+/* Слайд 1 */
+#slide1 {
+    background: url('header.jpg') no-repeat center center;
+    background-size: cover;
+}
+#slide1 .desc p {
+    margin: 1px 0;      /* отступ сверху и снизу между абзацами */
+    line-height: 1.3;    /* расстояние между строками внутри абзаца */
+}
+#slide1 .title { position: absolute; top: 254px; left: 87px; font-size: 64px; }
+#slide1 .desc { position: absolute; top: 369px; left: 87px; font-size: 34px; text-indent: 40px; line-height: 1.3; }
+
+/* Слайд 2 */
+ #slide2 {
+    position: relative;
+    width: 100%;
+    height: 100vh;          /* высота слайда */
+    background-color: #000;  /* черный фон под картинкой */
+    overflow: hidden;
+}
+
+/* Картинка с точными размерами и смещением */
+#slide2 .bg-image {
+    position: absolute;
+    top: -619px;             /* смещение по Y */
+    left: -27px;             /* смещение по X */
+    width: 1920px;          /* ширина картинки */
+    height: 1080px;         /* высота картинки */
+    object-fit: fill;       /* не сохраняем пропорции, растягиваем */
+    z-index: 0;
+}
+
+/* Текст и список поверх картинки */
+#slide2 .title,
+#slide2 .intro,
+#slide2 .features-title,
+#slide2 .features {
+    position: absolute;
+    z-index: 1;        /* поверх картинки */
+    color: #fff;
+}
+
+/* Чёрный полупрозрачный слой поверх картинки */
+#slide2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 0; /* текст поверх слоя */
+}
+#slide2 .title { position: absolute; top: 137px; left: 59px; font-size: 48px; }
+#slide2 .intro { position: absolute; top: 273px; left: 34px; font-size: 32px; text-align: center; line-height: 1.3; }
+#slide2 .features, #slide2 .engine-drive { font-size: 24px; line-height: 1.2; }
+#slide2 .features { font-size: 24px; position: absolute; top: 534px; left: 644px; }
+#slide2 .features li {font-size: 24px; line-height: 1.3; margin-bottom: 5px;}
+#slide2 .engine-drive { position: absolute; top: 760px; left: 873px; }
+#slide2 .engine-drive li {font-size: 24px; line-height: 1.3; margin-bottom: 5px;}
+#slide2 .car-image { position: absolute; top: 380px; left: -250px; width: 1200px; height: 680px; object-fit: cover; }
+
+/* Слайд 3 */
+#slide3 { background-color: #000; }
+#slide3 .title { position: absolute; top: 115px; left: 79px; font-size: 48px; }
+#slide3 .desc { position: absolute; top: 257px; left: 47px; font-size: 32px; text-align: center; line-height: 1.3; }
+#slide3 .interior { position: absolute; top: 609px; left: 681px; font-size: 32px; line-height: 1.2; }
+#slide3 .interior li {font-size: 28px; line-height: 1.3; margin-bottom: 5px;}
+#slide3 .car-image { position: absolute; top: 592px; left: -82px; width: 763px; height: 380px; object-fit: cover; }
+
+/* Слайд 4 */
+#slide4 { background-color: #000; }
+#slide4 .title { position: absolute; top: 130px; left: 127px; font-size: 48px; }
+#slide4 .desc { position: absolute; top: 240px; left: 101px; font-size: 32px; text-align: center; line-height: 1.3; }
+#slide4 .car-image { position: absolute; top: 247px; left: 567px; width: 688px; height: 855px; object-fit: cover; }
